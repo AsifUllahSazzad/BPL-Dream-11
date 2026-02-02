@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.hero-container{
+    height: 50.5vh;
+    background-image: url('./../../assets/bg-shadow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(19, 19, 19);
+}
+
+.newFont{
+    font-family: "Inter", sans-serif;
+}
