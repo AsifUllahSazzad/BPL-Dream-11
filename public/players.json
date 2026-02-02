@@ -1,0 +1,152 @@
+[
+  {
+    "playerId": 1,
+    "name": "Virat Kohli",
+    "country": "India",
+    "image": "https://i.ibb.co/CptW4Vyv/Virat-Kohli.jpg",
+    "role": "Batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm medium",
+    "biddingPrice": 2000000
+  },
+  {
+    "playerId": 2,
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "image": "https://i.ibb.co/TDdTz5GJ/Babar-Azam.webp",
+    "role": "Batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm off-break",
+    "biddingPrice": 1800000
+  },
+  {
+    "playerId": 3,
+    "name": "Joe Root",
+    "country": "England",
+    "image": "https://i.ibb.co/nqKtDP3r/Joe-Root.jpg",
+    "role": "Batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm off-break",
+    "biddingPrice": 1700000
+  },
+  {
+    "playerId": 4,
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co/9928crnd/Kane-Williamson.webp",
+    "role": "Batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm off-break",
+    "biddingPrice": 1650000
+  },
+  {
+    "playerId": 5,
+    "name": "Steve Smith",
+    "country": "Australia",
+    "image": "https://i.ibb.co/DgmDvpSQ/Steve-Smith.webp",
+    "role": "Batsman",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm leg-break",
+    "biddingPrice": 1750000
+  },
+  {
+    "playerId": 6,
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co/C3nD4X4J/Shakib-Al-Hasan.jpg",
+    "role": "All-Rounder",
+    "battingType": "Left-hand bat",
+    "bowlingType": "Left-arm orthodox",
+    "biddingPrice": 1500000
+  },
+  {
+    "playerId": 7,
+    "name": "Ben Stokes",
+    "country": "England",
+    "image": "https://i.ibb.co/6Jymhsw8/Ben-Stokes.jpg",
+    "role": "All-Rounder",
+    "battingType": "Left-hand bat",
+    "bowlingType": "Right-arm fast-medium",
+    "biddingPrice": 1900000
+  },
+  {
+    "playerId": 8,
+    "name": "Hardik Pandya",
+    "country": "India",
+    "image": "https://i.ibb.co/84647TWX/Hardik-Pandya.jpg",
+    "role": "All-Rounder",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm fast-medium",
+    "biddingPrice": 1600000
+  },
+  {
+    "playerId": 9,
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "image": "https://i.ibb.co/8Lr3dmRQ/Rashid-Khan.jpg",
+    "role": "Bowler",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm leg-break",
+    "biddingPrice": 1550000
+  },
+  {
+    "playerId": 10,
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "image": "https://i.ibb.co/8LBhsjw4/Jasprit-Bumrah.jpg",
+    "role": "Bowler",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm fast",
+    "biddingPrice": 1700000
+  },
+  {
+    "playerId": 11,
+    "name": "Shaheen Afridi",
+    "country": "Pakistan",
+    "image": "https://i.ibb.co/ynBxQysV/Shaheen-Afridi.jpg",
+    "role": "Bowler",
+    "battingType": "Left-hand bat",
+    "bowlingType": "Left-arm fast",
+    "biddingPrice": 1600000
+  },
+  {
+    "playerId": 12,
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co/k2Q2pzxL/Trent-Boult.jpg",
+    "role": "Bowler",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Left-arm fast",
+    "biddingPrice": 1500000
+  },
+  {
+    "playerId": 13,
+    "name": "MS Dhoni",
+    "country": "India",
+    "image": "https://i.ibb.co/RpwKXJX1/MS-Dhoni.webp",
+    "role": "Wicket-Keeper",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm medium",
+    "biddingPrice": 1400000
+  },
+  {
+    "playerId": 14,
+    "name": "Jos Buttler",
+    "country": "England",
+    "image": "https://i.ibb.co/fd8M1Zb4/Jos-Buttler.jpg",
+    "role": "Wicket-Keeper",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm medium",
+    "biddingPrice": 1650000
+  },
+  {
+    "playerId": 15,
+    "name": "Quinton de Kock",
+    "country": "South Africa",
+    "image": "https://i.ibb.co/Zb43vFY/Quinton-de-Kock.jpg",
+    "role": "Wicket-Keeper",
+    "battingType": "Left-hand bat",
+    "bowlingType": "None",
+    "biddingPrice": 1550000
+  }
+]

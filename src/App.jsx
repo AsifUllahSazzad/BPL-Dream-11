@@ -2,6 +2,7 @@ import { useState } from "react"
 import Banner from "./components/Banner/Banner"
 import Header from "./components/Header/Header"
 import { toast } from 'react-toastify';
+import Players from "./components/Players/Players";
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
           <Banner
           handleFreeCreditBtn={handleFreeCreditBtn}
           ></Banner>
+
+          <Players></Players>
       </div>
     </>
   )
