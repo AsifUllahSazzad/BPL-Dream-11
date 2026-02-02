@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Player from "../Player/Player";
+import SelectedPlayer from "../Selected Player/SelectedPlayer";
 
 const Players = () => {
 
@@ -19,11 +20,20 @@ const Players = () => {
 
 
 
+    // Handle the choose player button - selected players
+    const [selectedPlayers, setSelectedPlayers] = useState([]);
+
+    const handleTheChoosePlayer = (player) =>{
+        setSelectedPlayers(prevPlayer => [...prevPlayer, player]);
+    }
+
+
+
     return (
         <div>
             {/* Button */}
             <div className="flex items-center justify-between mt-20">
-                <h3 className="text-[1.75rem] font-bold"></h3>
+                <h3 className="text-[1.75rem] font-bold">{activeBtn === 'available' ? "Available Players" : `Selected Player `}</h3>
                 <div className="text-base inline-block border border-[#13131310] rounded-2xl mb-9 text-[#13131390]">
 
                     <button
@@ -45,7 +55,22 @@ const Players = () => {
                         players.map((player) => <Player
                         key={player.playerId}
                         player={player}
+                        handleTheChoosePlayer={handleTheChoosePlayer}
                         ></Player>)
+                    }
+                </div>
+            )
+        }
+
+        {/* Selected Player Button Data Load*/}
+        {
+            activeBtn === 'selected' && (
+                <div>
+                    {
+                        selectedPlayers.map((selectedP) => <SelectedPlayer
+                        key={selectedP.playerId}
+                        selectedPlayer={selectedP}
+                        ></SelectedPlayer>)
                     }
                 </div>
             )

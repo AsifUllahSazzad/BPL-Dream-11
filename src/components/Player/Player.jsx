@@ -2,7 +2,7 @@ import UserIcon from '../../assets/user.png'
 import FlagIcon from '../../assets/flag.png'
 
 
-const Player = ({player}) => {
+const Player = ({player, handleTheChoosePlayer}) => {
     const {image, name, country, role, battingType, bowlingType, biddingPrice} = player;
 
 
@@ -52,7 +52,9 @@ const Player = ({player}) => {
                         <div className='flex items-center justify-between'>
                             <h3 className='font-semibold text-base'>Price: ${biddingPrice}</h3>
         
-                            <button className='px-4 py-2 rounded-lg border border-[#E7E7E7] cursor-pointer hover:bg-[#E7FE29]'>Choose Player</button>
+                            <button
+                            onClick={()=> handleTheChoosePlayer(player)}
+                            className='px-4 py-2 rounded-lg border border-[#E7E7E7] cursor-pointer hover:bg-[#E7FE29]'>Choose Player</button>
                         </div>
                     </div>
                 </div>
