@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import Player from "../Player/Player";
 
 const Players = () => {
 
 
-    // Players data store
+    // Players data store state
     const [players, setPlayers] = useState([]);
 
     useEffect(() => {
@@ -34,6 +35,21 @@ const Players = () => {
                     className={`cursor-pointer px-5 py-4 transition hover:text-black ${activeBtn==='selected' && ("bg-[#E7FE29] font-bold text-black rounded-tr-2xl rounded-br-2xl")}`}>Selected {}</button>
                 </div>
             </div>
+
+
+        {/* Available Button Data Load */}
+        {
+            activeBtn === 'available' && (
+                <div className="grid grid-cols-3 gap-10">
+                    {
+                        players.map((player) => <Player
+                        key={player.playerId}
+                        player={player}
+                        ></Player>)
+                    }
+                </div>
+            )
+        }
 
 
         </div>
