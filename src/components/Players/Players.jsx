@@ -33,7 +33,7 @@ const Players = () => {
         <div>
             {/* Button */}
             <div className="flex items-center justify-between mt-20">
-                <h3 className="text-[1.75rem] font-bold">{activeBtn === 'available' ? "Available Players" : `Selected Player `}</h3>
+                <h3 className="text-[1.75rem] font-bold">{activeBtn === 'available' ? "Available Players" : `Selected Player (${selectedPlayers.length}/6)`}</h3>
                 <div className="text-base inline-block border border-[#13131310] rounded-2xl mb-9 text-[#13131390]">
 
                     <button
@@ -65,7 +65,7 @@ const Players = () => {
         {/* Selected Player Button Data Load*/}
         {
             activeBtn === 'selected' && (
-                <div>
+                <div className="space-y-10">
                     {
                         selectedPlayers.map((selectedP) => <SelectedPlayer
                         key={selectedP.playerId}
