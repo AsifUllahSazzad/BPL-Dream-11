@@ -103,7 +103,7 @@ const Players = ({coin, setCoin}) => {
                         ></SelectedPlayer>)
 
                     }
-                         <div className="rounded-2xl p-2 border inline-block">
+                         <div className="rounded-2xl p-2 border inline-block hover:border-orange-700 hover:text-orange-700">
                             <button
                             onClick={() => setActiveBtn('available')}
                             className="bg-[#E7FE29] p-4 rounded-2xl font-bold cursor-pointer">Add More Player</button>
