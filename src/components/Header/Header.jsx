@@ -5,7 +5,7 @@ const Header = ({coin}) => {
     return (
         <div className='flex justify-between items-center'>
             {/* Logo */}
-            <img className='size-18' src={Logo} alt="Logo" />
+            <a href=""><img className='size-18' src={Logo} alt="Logo" /></a>
             <nav className='flex gap-x-12 items-center text-gray-500 text-base'>
                 <p><a href="#">Home</a></p>
                 <p><a href="#">Fixture</a></p>
