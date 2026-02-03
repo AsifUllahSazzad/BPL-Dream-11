@@ -1,9 +1,15 @@
 import Delete from './../../assets/delete.png'
 
 
-const SelectedPlayer = ({selectedPlayer}) => {
+const SelectedPlayer = ({selectedPlayer, selectedPlayers, setSelectedPlayers}) => {
 
     const {playerId, image, name, battingType, biddingPrice} = selectedPlayer;
+
+    const removePlayer = () =>{
+        const remainingPlayers = selectedPlayers.filter((p) => p.playerId !== playerId);
+
+        setSelectedPlayers(remainingPlayers);
+    }
 
     return (
         <div className="flex border p-6 gap-x-6 border-[#13131330] rounded-2xl items-center">
@@ -13,7 +19,7 @@ const SelectedPlayer = ({selectedPlayer}) => {
                         <p className="text-base text-[#807b7b]">{battingType}</p>
                     </div>
                     <img 
-                    
+                    onClick={removePlayer}
                     className='size-8 ml-auto cursor-pointer' src={Delete} alt="Remove Player" />
                 </div>
     );

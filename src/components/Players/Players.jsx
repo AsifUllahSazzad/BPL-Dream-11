@@ -51,7 +51,7 @@ const Players = ({coin, setCoin}) => {
                 }
             }
         }
-        
+
     }
 
 
@@ -97,6 +97,8 @@ const Players = ({coin, setCoin}) => {
                         selectedPlayers.map((selectedP) => <SelectedPlayer
                         key={selectedP.playerId}
                         selectedPlayer={selectedP}
+                        selectedPlayers={selectedPlayers}
+                        setSelectedPlayers={setSelectedPlayers}
                         ></SelectedPlayer>)
                     }
                 </div>
