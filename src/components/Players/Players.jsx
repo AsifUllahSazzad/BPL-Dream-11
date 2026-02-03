@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Player from "../Player/Player";
 import SelectedPlayer from "../Selected Player/SelectedPlayer";
+import { toast } from 'react-toastify';
 
-const Players = () => {
+const Players = ({coin, setCoin}) => {
 
 
     // Players data store state
@@ -24,7 +25,33 @@ const Players = () => {
     const [selectedPlayers, setSelectedPlayers] = useState([]);
 
     const handleTheChoosePlayer = (player) =>{
-        setSelectedPlayers(prevPlayer => [...prevPlayer, player]);
+
+        // Bidding price check
+        let afterBiddingPrice = coin - player.biddingPrice;
+        
+        // Player already exist
+        const playerExistCheck = selectedPlayers.some((p) => p.playerId === player.playerId);
+        
+        if(afterBiddingPrice<0){
+            toast.error("Not enough money to buy this player. Claim some Credit");
+        }
+        else{
+            if(playerExistCheck){
+                toast.error("Player already selected");
+            }
+            else{
+                // Selected players length <= 6
+                if(selectedPlayers.length < 6){
+                    setSelectedPlayers(prevPlayer => [...prevPlayer, player]);
+                    setCoin(afterBiddingPrice);
+                    toast.success(`Congrates !! ${player.name} is now in your squad`);
+                }
+                else{
+                    toast.error("Player limit reached");
+                }
+            }
+        }
+        
     }
 
 
