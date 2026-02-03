@@ -1,4 +1,5 @@
 import Delete from './../../assets/delete.png'
+import Remove from './../../assets/Hover-Remove.png'
 
 
 const SelectedPlayer = ({selectedPlayer, selectedPlayers, setSelectedPlayers, setCoin}) => {
@@ -21,9 +22,21 @@ const SelectedPlayer = ({selectedPlayer, selectedPlayers, setSelectedPlayers, se
                         <h1 className="text-2xl font-semibold">{name}</h1>
                         <p className="text-base text-[#807b7b]">{battingType}</p>
                     </div>
-                    <img 
-                    onClick={removePlayer}
-                    className='size-8 ml-auto cursor-pointer' src={Delete} alt="Remove Player" />
+
+
+                    <div className="group ml-auto cursor-pointer" onClick={removePlayer}>
+
+                        <img
+                            className="size-8 group-hover:hidden"
+                            src={Delete}
+                            alt="Remove Player"
+                        />
+                        <img
+                            className="size-8 hidden group-hover:block"
+                            src={Remove}
+                            alt="Remove Player"
+                        />
+                    </div>
                 </div>
     );
 };
