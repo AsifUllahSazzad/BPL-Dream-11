@@ -3,6 +3,7 @@ import Banner from "./components/Banner/Banner"
 import Header from "./components/Header/Header"
 import { toast } from 'react-toastify';
 import Players from "./components/Players/Players";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
@@ -30,6 +31,9 @@ function App() {
           setCoin={setCoin}
           ></Players>
       </div>
+
+    <Footer></Footer>
+
     </>
   )
 }
