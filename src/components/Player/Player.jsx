@@ -11,7 +11,7 @@ const Player = ({player, handleTheChoosePlayer}) => {
                     
                     <div className='flex flex-col justify-center gap-y-4'>
         
-                        <div className="w-full aspect-[4/4] overflow-hidden rounded-2xl">
+                        <div className="w-full aspect-square overflow-hidden rounded-2xl">
                         <img
                             className="w-full h-full object-cover object-top"
                             src={image}
