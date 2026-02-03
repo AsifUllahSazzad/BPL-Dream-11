@@ -9,8 +9,8 @@ const Banner = ({handleFreeCreditBtn}) => {
             <h1 className='font-bold text-[2.5rem] text-[#FFFFFF] mb-4'>Assemble Your Ultimate Dream 11 Cricket Team</h1>
             <h3 className='newFont text-[#ffffff70] text-2xl font-medium'>Beyond Boundaries Beyond Limits</h3>
 
-            <button onClick={handleFreeCreditBtn} className='cursor-pointer border border-[#E7FE29] p-2 rounded-2xl mt-6'>
-                <div className='bg-[#E7FE29] font-bold text-base px-5 py-3.5 rounded-xl'>Claim Free Credit</div>
+            <button onClick={handleFreeCreditBtn} className='cursor-pointer border border-[#E7FE29] p-2 rounded-2xl mt-6 hover:border-amber-900'>
+                <div className='bg-[#E7FE29] font-bold text-base px-5 py-3.5 rounded-xl hover:text-amber-900'>Claim Free Credit</div>
             </button>
         </div>
     );
