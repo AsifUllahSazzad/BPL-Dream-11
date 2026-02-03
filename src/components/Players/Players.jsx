@@ -99,8 +99,14 @@ const Players = ({coin, setCoin}) => {
                         selectedPlayer={selectedP}
                         selectedPlayers={selectedPlayers}
                         setSelectedPlayers={setSelectedPlayers}
+                        setCoin={setCoin}
                         ></SelectedPlayer>)
+
                     }
+                         <div className="rounded-2xl p-2 border inline-block">
+                            <button
+                            className="bg-[#E7FE29] p-4 rounded-2xl font-bold cursor-pointer">Add More Player</button>
+                        </div>
                 </div>
             )
         }
