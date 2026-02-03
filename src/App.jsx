@@ -9,7 +9,7 @@ function App() {
   // Free Credit
   const [coin, setCoin] = useState(0);
   const handleFreeCreditBtn = () =>{
-      const newCoin = 5000000;
+      const newCoin = 500000;
       setCoin(prevCoin => prevCoin + newCoin);
 
       toast.success("Credit Added to your Account");
@@ -25,7 +25,10 @@ function App() {
           handleFreeCreditBtn={handleFreeCreditBtn}
           ></Banner>
 
-          <Players></Players>
+          <Players
+          coin={coin}
+          setCoin={setCoin}
+          ></Players>
       </div>
     </>
   )
