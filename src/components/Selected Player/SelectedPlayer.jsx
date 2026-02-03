@@ -1,14 +1,17 @@
 import Delete from './../../assets/delete.png'
 
 
-const SelectedPlayer = ({selectedPlayer, selectedPlayers, setSelectedPlayers}) => {
+const SelectedPlayer = ({selectedPlayer, selectedPlayers, setSelectedPlayers, setCoin}) => {
 
     const {playerId, image, name, battingType, biddingPrice} = selectedPlayer;
 
     const removePlayer = () =>{
+        // Remove player
         const remainingPlayers = selectedPlayers.filter((p) => p.playerId !== playerId);
-
         setSelectedPlayers(remainingPlayers);
+
+        // Remove player bidding price add also
+        setCoin(prevMoney => prevMoney + biddingPrice);
     }
 
     return (
