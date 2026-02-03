@@ -42,7 +42,7 @@ const Players = () => {
 
                     <button
                     onClick={() => setActiveBtn('selected')}
-                    className={`cursor-pointer px-5 py-4 transition hover:text-black ${activeBtn==='selected' && ("bg-[#E7FE29] font-bold text-black rounded-tr-2xl rounded-br-2xl")}`}>Selected {}</button>
+                    className={`cursor-pointer px-5 py-4 transition hover:text-black ${activeBtn==='selected' && ("bg-[#E7FE29] font-bold text-black rounded-tr-2xl rounded-br-2xl")}`}>Selected ({selectedPlayers.length})</button>
                 </div>
             </div>
 
