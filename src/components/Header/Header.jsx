@@ -10,7 +10,7 @@ const Header = ({coin}) => {
         useEffect(() => {
             // runs when component mounts
             const handleScroll = () => {
-                setIsScrolled(window.scrollY>120);
+                setIsScrolled(window.scrollY>50);
             };
 
             window.addEventListener('scroll', handleScroll);
