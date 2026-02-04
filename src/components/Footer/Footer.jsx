@@ -14,9 +14,9 @@ const Footer = () => {
             </div>
 
             {/* Footer Content */}
-            <div className="h-195 bg-[#060919]">
+            <div className="h-195 bg-[#060919] pt-55">
 
-                <div className='max-w-7xl mx-auto text-white'>
+                <div className='max-w-7xl mx-auto text-white space-y-10'>
                         {/* Image Content */}
                     <div className='size-fit mx-auto'>
                             <img className='size-fit' src={FooterLogo} alt="Footer Logo" />
