@@ -1,18 +1,34 @@
 import { useState } from 'react';
 import './Subscribe.css'
+import { addToLS } from '../utilities/localStorage';
+import { toast } from 'react-toastify';
 
 const Subscribe = () => {
 
     const [value, setValue] = useState("");
 
+    // Email add to Local storage
     const handleTheValue = () =>{
         
-        if(value.includes("@")){
-            console.log(value)
+        // email validation
+        const isDuplicate = addToLS(value);
+        
+        if(isDuplicate){
+            toast.error("This email is already added");
+            setValue("");
+        }
+        else if(!value.includes("@") && !value.includes(".com") && value.includes(" ")){
+            toast.error("Please enter a valid email addres");
+            // clear input box
+            setValue("");
+            return;
         }
         else{
-            console.log("error")
+            addToLS(value);
+            toast.success("Email added successfully");
+            setValue("")
         }
+
     }
 
     return (
