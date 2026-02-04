@@ -34,7 +34,7 @@ const Footer = () => {
                             <h5 className='font-semibold text-lg'>
                                 Quick Links
                             </h5>
-                            <ul className='text-[#9B9DA3] list-disc text-base space-y-2'>
+                            <ul className='text-[#9B9DA3] list-disc text-base space-y-2 list-inside'>
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">Services</a></li>
                                 <li><a href="#">About</a></li>
