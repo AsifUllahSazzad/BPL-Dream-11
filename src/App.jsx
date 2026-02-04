@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Banner from "./components/Banner/Banner"
 import Header from "./components/Header/Header"
 import { toast } from 'react-toastify';
@@ -6,6 +6,10 @@ import Players from "./components/Players/Players";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+
+  useEffect(() => {
+    document.title = "Dream 11";
+  },[])
 
   // Free Credit
   const [coin, setCoin] = useState(0);
@@ -15,6 +19,8 @@ function App() {
 
       toast.success("Credit Added to your Account");
   }
+
+  
 
   return (
     <>
