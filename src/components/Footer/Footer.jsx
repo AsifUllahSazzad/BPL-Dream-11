@@ -14,9 +14,9 @@ const Footer = () => {
             </div>
 
             {/* Footer Content */}
-            <div className="h-195 bg-[#060919] pt-55">
+            <div className="h-180 bg-[#060919] pt-55">
 
-                <div className='max-w-7xl mx-auto text-white space-y-10'>
+                <div className='max-w-7xl mx-auto text-white space-y-10 mb-20'>
                         {/* Image Content */}
                     <div className='size-fit mx-auto'>
                             <img className='size-fit' src={FooterLogo} alt="Footer Logo" />
@@ -57,6 +57,10 @@ const Footer = () => {
 
                 </div>
 
+                {/* Copyright */}
+                <hr className='text-[#ffffff99]'/>
+
+                <p className='text-[#ffffff99] text-center text-base pt-4'>@2024 Your Company All Rights Reserved.</p>
             </div>
 
         </div>
