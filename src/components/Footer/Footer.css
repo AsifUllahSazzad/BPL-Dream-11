@@ -1,5 +1,5 @@
 .btnStyle{
-    background-image: url('./../../assets/buttonStyle-Photoroom.png');
+    background-image: url('./../../../public/assets/buttonStyle-Photoroom.png');
     background-position: center;
     cursor: pointer;
     background-size: 200%;
