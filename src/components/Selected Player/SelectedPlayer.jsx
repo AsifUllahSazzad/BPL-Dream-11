@@ -1,5 +1,5 @@
-import Delete from './../../assets/delete.png'
-import Remove from './../../assets/Hover-Remove.png'
+import Delete from '../../../public/assets/delete.png'
+import Remove from '../../../public/assets/Hover-Remove.png'
 
 
 const SelectedPlayer = ({selectedPlayer, selectedPlayers, setSelectedPlayers, setCoin}) => {
@@ -16,7 +16,7 @@ const SelectedPlayer = ({selectedPlayer, selectedPlayers, setSelectedPlayers, se
     }
 
     return (
-        <div className="flex border p-6 gap-x-6 border-[#13131330] rounded-2xl items-center">
+        <div className="max-md:mx-5 flex border p-6 gap-x-6 border-[#13131330] rounded-2xl items-center mt-10">
                     <img className="size-20 rounded-2xl" src={image} alt="Profile Picture" />
                     <div className="space-y-2">
                         <h1 className="text-2xl font-semibold">{name}</h1>
