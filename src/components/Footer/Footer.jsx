@@ -1,15 +1,50 @@
 import "./Footer.css"
 import FooterLogo from './../../assets/logo-footer.png'
 import Subscribe from "../Subscribe/Subscribe";
+import { useState } from "react";
+import { toast } from 'react-toastify';
+import {addToLS} from '../utilities/localStorage'
 
 const Footer = () => {
+
+    const [value, setValue] = useState("");
+
+    // Email add to Local storage
+    const handleTheValue = () =>{
+        
+        // email validation
+        if(!value.includes("@") || !value.includes(".com") || value.includes(" ")){
+
+                toast.error("Please enter a valid email addres");
+                // clear input box
+                setValue("");
+                return;
+        }
+        const isDuplicate = addToLS(value);
+        
+        if(isDuplicate){
+            toast.error("This email is already added");
+            setValue("");
+        }
+        else{
+            addToLS(value);
+            toast.success("Email added successfully");
+            setValue("")
+        }
+
+    }
+
     return (
         <div className="mt-95 relative">
             
             {/* Subscribe Content */}
             <div className="relative">
                 <div className="max-w-7xl absolute w-full -top-50 left-1/2 -translate-x-1/2">
-                    <Subscribe></Subscribe>
+                    <Subscribe
+                    handleTheValue={handleTheValue}
+                    setValue={setValue}
+                    value={value}
+                    ></Subscribe>
                 </div>
             </div>
 
@@ -49,8 +84,13 @@ const Footer = () => {
                             <p className='text-[#9B9DA3] text-base'>Subscribe to our newsletter for the latest updates.</p>
                             </div>
 
-                            <input type="email" placeholder='Enter your email' className='text-black px-7.5 py-3.5 rounded-l-xl bg-white placeholder:text-[#686565]'/>
-                            <button className='btnStyle px-7.5 py-3.5 rounded-r-xl shadow-[inset_0px_10px_10px_rgba(0,0,0,0.1),inset_-10px_0px_10px_rgba(0,0,0,0.1),inset_0px_-10px_10px_rgba(0,0,0,0.1),inset_10px_0px_10px_rgba(0,0,0,0.1)] text-black font-bold'>Subscribe</button>
+                            <input
+                            value={value}
+                            onChange={(e) => setValue(e.target.value)}
+                            type="email" placeholder='Enter your email' className='text-black px-7.5 py-3.5 rounded-l-xl bg-white placeholder:text-[#686565]'/>
+                            <button
+                            onClick={handleTheValue}
+                            className='btnStyle px-7.5 py-3.5 rounded-r-xl shadow-[inset_0px_10px_10px_rgba(0,0,0,0.1),inset_-10px_0px_10px_rgba(0,0,0,0.1),inset_0px_-10px_10px_rgba(0,0,0,0.1),inset_10px_0px_10px_rgba(0,0,0,0.1)] text-black font-bold'>Subscribe</button>
                         </div>
 
                     </div>
