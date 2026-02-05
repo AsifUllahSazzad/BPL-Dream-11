@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-     <div className='max-w-7xl mx-auto mt-12'>
+     <div className='max-w-7xl mx-auto mt-12 max-md:mt-5'>
           <Header
           coin={coin}
           ></Header>
