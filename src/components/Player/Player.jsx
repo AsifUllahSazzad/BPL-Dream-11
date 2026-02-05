@@ -1,5 +1,5 @@
-import UserIcon from '../../assets/user.png'
-import FlagIcon from '../../assets/flag.png'
+import UserIcon from '../../../public/assets/user.png'
+import FlagIcon from '../../../public/assets/flag.png'
 
 
 const Player = ({player, handleTheChoosePlayer}) => {
@@ -7,7 +7,7 @@ const Player = ({player, handleTheChoosePlayer}) => {
 
 
     return (
-        <div className='border border-[#E7E7E7] rounded-2xl p-6'>
+        <div className='border border-[#E7E7E7] rounded-2xl p-6 mt-10'>
                     
                     <div className='flex flex-col justify-center gap-y-4'>
         
