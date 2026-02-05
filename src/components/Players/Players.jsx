@@ -59,25 +59,46 @@ const Players = ({coin, setCoin}) => {
     return (
         <div>
             {/* Button */}
-            <div className="flex items-center justify-between mt-20">
-                <h3 className="text-[1.75rem] font-bold">{activeBtn === 'available' ? "Available Players" : `Selected Player (${selectedPlayers.length}/6)`}</h3>
-                <div className="text-base inline-block border border-[#13131310] rounded-2xl mb-9 text-[#13131390]">
+            <div className="mt-12 md:mt-20 px-4 md:px-0">
 
-                    <button
-                        onClick={() => setActiveBtn('available')}
-                        className={`cursor-pointer px-5 py-4 transition hover:text-black ${activeBtn==='available' && ("bg-[#E7FE29] font-bold text-black rounded-tl-2xl rounded-bl-2xl")}`}>Available</button>
+  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
 
-                    <button
-                    onClick={() => setActiveBtn('selected')}
-                    className={`cursor-pointer px-5 py-4 transition hover:text-black ${activeBtn==='selected' && ("bg-[#E7FE29] font-bold text-black rounded-tr-2xl rounded-br-2xl")}`}>Selected ({selectedPlayers.length})</button>
-                </div>
-            </div>
+    {/* Title */}
+    <h3 className="text-lg md:text-[1.75rem] font-bold text-center md:text-left">
+      {activeBtn === "available"
+        ? "Available Players"
+        : `Selected Player (${selectedPlayers.length}/6)`}
+    </h3>
+
+    {/* Buttons */}
+    <div className="flex w-full md:w-auto border border-[#13131310] rounded-2xl text-sm md:text-base text-[#13131390] overflow-hidden">
+
+      <button
+        onClick={() => setActiveBtn("available")}
+        className={`flex-1 px-4 py-2 md:px-5 md:py-3 transition hover:text-black
+        ${activeBtn === "available" ? "bg-[#E7FE29] font-bold text-black" : ""}`}
+      >
+        Available
+      </button>
+
+      <button
+        onClick={() => setActiveBtn("selected")}
+        className={`flex-1 px-4 py-2 md:px-5 md:py-3 transition hover:text-black
+        ${activeBtn === "selected" ? "bg-[#E7FE29] font-bold text-black" : ""}`}
+      >
+        Selected ({selectedPlayers.length})
+      </button>
+
+    </div>
+  </div>
+</div>
+
 
 
         {/* Available Button Data Load */}
         {
             activeBtn === 'available' && (
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-3 md:gap-5 max-md:grid-cols-1 max-md:mx-5">
                     {
                         players.map((player) => <Player
                         key={player.playerId}
@@ -103,11 +124,20 @@ const Players = ({coin, setCoin}) => {
                         ></SelectedPlayer>)
 
                     }
-                         <div className="rounded-2xl p-2 border inline-block hover:border-orange-700 hover:text-orange-700">
-                            <button
-                            onClick={() => setActiveBtn('available')}
-                            className="bg-[#E7FE29] p-4 rounded-2xl font-bold cursor-pointer">Add More Player</button>
+                         <div className="px-4 md:px-0 flex justify-center md:justify-start mt-5">
+
+                            <div className="rounded-2xl p-2 border inline-block hover:border-orange-700 hover:text-orange-700 w-full md:w-auto">
+
+                                <button
+                                onClick={() => setActiveBtn("available")}
+                                className="bg-[#E7FE29] w-full md:w-auto px-4 py-2 md:px-6 md:py-4 rounded-2xl font-bold cursor-pointer text-sm md:text-base"
+                                >
+                                Add More Player
+                                </button>
+
+                            </div>
                         </div>
+
                 </div>
             )
         }
