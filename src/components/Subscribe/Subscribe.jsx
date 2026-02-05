@@ -11,17 +11,18 @@ const Subscribe = () => {
     const handleTheValue = () =>{
         
         // email validation
+        if(!value.includes("@") || !value.includes(".com") || value.includes(" ")){
+
+                toast.error("Please enter a valid email addres");
+                // clear input box
+                setValue("");
+                return;
+        }
         const isDuplicate = addToLS(value);
         
         if(isDuplicate){
             toast.error("This email is already added");
             setValue("");
-        }
-        else if(!value.includes("@") && !value.includes(".com") && value.includes(" ")){
-            toast.error("Please enter a valid email addres");
-            // clear input box
-            setValue("");
-            return;
         }
         else{
             addToLS(value);
