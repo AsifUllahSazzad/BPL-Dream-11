@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 .newsletter{
-    background-image: url('./../../assets/bg-shadow.png');
+    background-image: url('../../../public/assets/bg-shadow.png');
     height: 336px;
     background-color: rgb(255,255,255);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 .newFont{
@@ -13,9 +14,11 @@
 }
 
 .btnStyle{
-    background-image: url('./../../assets/buttonStyle-Photoroom.png');
+    background-image: url('../../../public/assets/buttonStyle-Photoroom.png');
     background-position: center;
     cursor: pointer;
     background-size: 200%;
     background-repeat: no-repeat;
 }
+
+
